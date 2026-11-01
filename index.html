@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Personal Drive Backup — personal file backups to Google Drive using rclone.">
+  <meta name="color-scheme" content="light">
+  <title>Personal Drive Backup</title>
+  <style>
+    :root { color-scheme: light; --bg: #f6f6f2; --paper: #fff; --text: #25352f; --muted: #59665f; --accent: #205b47; --line: #d6ded7; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font: 1rem/1.75 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    a { color: var(--accent); text-underline-offset: .2em; }
+    a:hover { text-decoration-thickness: 2px; }
+    a:focus-visible { outline: 3px solid var(--accent); outline-offset: 5px; border-radius: 2px; }
+    .skip { position: absolute; top: -6rem; left: 1rem; padding: .5rem 1rem; background: var(--paper); }
+    .skip:focus { top: 1rem; }
+    .shell { width: min(100% - 2.5rem, 48rem); margin-inline: auto; }
+    header { padding-block: 2rem 1.5rem; border-bottom: 1px solid var(--line); }
+    .brand { font-weight: 700; text-decoration: none; }
+    nav { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; margin-top: .75rem; font-size: .9rem; }
+    nav a[aria-current="page"] { color: var(--text); font-weight: 600; }
+    main { padding-block: 3rem; }
+    .eyebrow { margin: 0 0 .75rem; color: var(--accent); font-size: .8rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; }
+    h1 { margin: 0 0 1.5rem; font: 500 clamp(2.25rem, 6vw, 3.75rem)/1.12 Georgia, "Times New Roman", serif; letter-spacing: -.025em; overflow-wrap: anywhere; }
+    h2 { margin: 2.25rem 0 .65rem; font-size: 1.15rem; line-height: 1.4; }
+    p { margin: 0 0 1rem; }
+    .lead { max-width: 42rem; color: var(--muted); font-size: 1.15rem; }
+    .note { margin-block: 2rem; padding: 1.25rem 1.5rem; border-left: 3px solid var(--accent); background: var(--paper); }
+    .note p:last-child { margin-bottom: 0; }
+    footer { padding-block: 1.5rem 2.5rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .85rem; }
+    footer p:last-child { margin-bottom: 0; }
+    @media (max-width: 480px) { main { padding-block: 2rem; } .note { padding: 1rem; } }
+    @media print { body { background: #fff; } .skip, nav { display: none; } main { padding-block: 1rem; } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="shell">
+    <header>
+      <a class="brand" href="index.html">Personal Drive Backup</a>
+      <nav aria-label="Main navigation">
+        <a href="index.html" aria-current="page">About</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+    </header>
+    <main id="main">
+      <p class="eyebrow">For personal use</p>
+      <h1>Personal Drive Backup</h1>
+      <p class="lead">A personal integration powered by rclone for backing up your own files to Google Drive.</p>
+
+      <div class="note">
+        <p>This application is used solely by its owner to access their own Google Drive. It is not open for registration by other users.</p>
+      </div>
+
+      <h2>Purpose</h2>
+      <p>The application allows its owner to back up selected files from their own devices or server to their Google Drive, verify backups, and restore files when needed.</p>
+
+      <h2>Google Drive access</h2>
+      <p>Authorization is handled through Google OAuth. Access is used for backup operations configured by the owner in rclone. Depending on the permissions granted and commands selected, this may include reading files and their metadata, as well as creating, updating, and deleting files and folders.</p>
+      <p>Selecting a backup folder in rclone does not, by itself, restrict the permissions granted by Google: their scope is determined during authorization. Access can be revoked in the Google Account settings.</p>
+
+      <h2>Data and privacy</h2>
+      <p>Backups are stored in the owner's Google Drive. This website provides information about the application only and does not accept files or access tokens.</p>
+      <p><a href="privacy.html">Read the privacy policy →</a></p>
+
+      <h2>Contact</h2>
+      <p>To contact the application owner, use the support email address shown on the Google OAuth consent screen for Personal Drive Backup.</p>
+    </main>
+    <footer>
+      <p>A personal integration using <a href="https://rclone.org/">rclone</a>. This is not an official application of Google or the rclone project.</p>
+    </footer>
+  </div>
+</body>
+</html>
