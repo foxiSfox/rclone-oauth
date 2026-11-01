@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Personal Drive Backup privacy policy: access to Google Drive data, backup storage, and revoking permissions.">
+  <meta name="color-scheme" content="light">
+  <title>Privacy Policy — Personal Drive Backup</title>
+  <style>
+    :root { color-scheme: light; --bg: #f6f6f2; --paper: #fff; --text: #25352f; --muted: #59665f; --accent: #205b47; --line: #d6ded7; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font: 1rem/1.75 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    a { color: var(--accent); text-underline-offset: .2em; }
+    a:hover { text-decoration-thickness: 2px; }
+    a:focus-visible { outline: 3px solid var(--accent); outline-offset: 5px; border-radius: 2px; }
+    .skip { position: absolute; top: -6rem; left: 1rem; padding: .5rem 1rem; background: var(--paper); }
+    .skip:focus { top: 1rem; }
+    .shell { width: min(100% - 2.5rem, 48rem); margin-inline: auto; }
+    header { padding-block: 2rem 1.5rem; border-bottom: 1px solid var(--line); }
+    .brand { font-weight: 700; text-decoration: none; }
+    nav { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; margin-top: .75rem; font-size: .9rem; }
+    nav a[aria-current="page"] { color: var(--text); font-weight: 600; }
+    main { padding-block: 3rem; }
+    .eyebrow { margin: 0 0 .75rem; color: var(--accent); font-size: .8rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; }
+    h1 { margin: 0 0 1rem; font: 500 clamp(2rem, 5vw, 3rem)/1.2 Georgia, "Times New Roman", serif; letter-spacing: -.025em; overflow-wrap: anywhere; }
+    h2 { margin: 2.25rem 0 .65rem; font-size: 1.15rem; line-height: 1.4; }
+    p { margin: 0 0 1rem; }
+    .updated { margin-bottom: 2rem; color: var(--muted); font-size: .9rem; }
+    ul { padding-left: 1.25rem; }
+    li { margin-block: .5rem; }
+    .note { margin-block: 1.5rem; padding: 1.25rem 1.5rem; border-left: 3px solid var(--accent); background: var(--paper); }
+    .note p:last-child { margin-bottom: 0; }
+    footer { padding-block: 1.5rem 2.5rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .85rem; }
+    footer p:last-child { margin-bottom: 0; }
+    @media (max-width: 480px) { main { padding-block: 2rem; } .note { padding: 1rem; } }
+    @media print { body { background: #fff; } .skip, nav { display: none; } main { padding-block: 1rem; } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="shell">
+    <header>
+      <a class="brand" href="index.html">Personal Drive Backup</a>
+      <nav aria-label="Main navigation">
+        <a href="index.html">About</a>
+        <a href="privacy.html" aria-current="page">Privacy</a>
+      </nav>
+    </header>
+    <main id="main">
+      <p class="eyebrow">Personal Drive Backup</p>
+      <h1>Privacy Policy</h1>
+      <p class="updated">Last updated: <time datetime="2026-11-01">November 1, 2026</time></p>
+
+      <p>Personal Drive Backup is a personal integration powered by rclone for backing up the owner's files to their Google Drive. The owner is the application's only user. This policy describes how this integration handles data and how its informational website operates.</p>
+
+      <h2>1. Data processed</h2>
+      <p>To perform backup tasks, rclone processes:</p>
+      <ul>
+        <li>the contents of files that the owner copies, verifies, or restores;</li>
+        <li>file and folder metadata, including names, identifiers, sizes, modification dates, and other information needed for the selected operations;</li>
+        <li>OAuth tokens issued by Google to access the account within the permissions granted.</li>
+      </ul>
+      <p>The exact scope of accessible data depends on the Google OAuth permissions granted. Access may extend beyond the folder selected for backups. The application does not request or store the Google Account password.</p>
+
+      <h2>2. How data is used</h2>
+      <p>Data is used exclusively for personal backup operations: uploading, verifying, updating, and restoring backups, as well as deleting files and folders when the owner explicitly selects the corresponding rclone commands or settings.</p>
+      <p>This integration does not use data for advertising, profiling, sale, or training artificial intelligence models.</p>
+
+      <h2>3. Storage and retention</h2>
+      <p>Backups are stored in the owner's Google Drive. Original and restored files remain on the devices or server selected by the owner. The rclone configuration and saved OAuth tokens are stored in the environment where the owner has configured rclone.</p>
+      <p>Depending on its settings, rclone may create local logs or temporary files. Logs may contain file names and paths, operation details, and error information.</p>
+      <p>The owner determines how long backups, configuration, and logs are kept. Backups are deleted manually by the owner or through tasks they have configured. The timing of permanent deletion in Google Drive also depends on its trash functionality and Google's policies.</p>
+
+      <h2>4. Data sharing</h2>
+      <p>To perform backups, files and necessary technical data are transferred between the owner's environment running rclone and Google Drive. Google's processing of data is governed by the <a href="https://policies.google.com/privacy?hl=en">Google Privacy Policy</a>.</p>
+      <p>This personal integration does not sell data or share it with advertising or analytics services. Publishing this website on GitHub Pages does not publish backups or send Google Drive contents or OAuth tokens to GitHub.</p>
+
+      <h2>5. Revoking access and deleting data</h2>
+      <p>The owner can stop rclone tasks at any time and revoke Personal Drive Backup's access in the <a href="https://myaccount.google.com/connections">third-party connections section of their Google Account</a>.</p>
+      <div class="note">
+        <p>Revoking access does not, by itself, delete existing backups, local files, or the rclone configuration. To delete data, separately remove the relevant backups from Google Drive, empty the trash if needed, and delete local tokens, configuration, and logs.</p>
+      </div>
+
+      <h2>6. Informational website</h2>
+      <p>This website consists only of static pages. It has no file upload forms, sign-in functionality, advertising scripts, or analytics services added by the owner. The page code does not set cookies or use browser local storage.</p>
+      <p>When the website is hosted on GitHub Pages, GitHub may process technical information about visits, including IP addresses, under the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>.</p>
+
+      <h2>7. Contact and policy updates</h2>
+      <p>The application is maintained by its owner. For contact, use the support email address shown on the Google OAuth consent screen for Personal Drive Backup.</p>
+      <p>The owner updates this page when the application's purpose or data handling practices change. The date of the current version appears at the beginning of this document.</p>
+    </main>
+    <footer>
+      <p><a href="index.html">← About Personal Drive Backup</a></p>
+    </footer>
+  </div>
+</body>
+</html>
